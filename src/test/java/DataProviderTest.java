@@ -55,6 +55,17 @@ public class DataProviderTest {
         };
         // @formatter:on
     }
+    @DataProvider
+    public static Object[][] dataProviderSubtract() {
+        // @formatter:off
+        return new Object[][] {
+                { 0, 0, 0 },
+                { 2, 1, 2 },
+                { 2, 2, 0 },
+                /* ... */
+        };
+        // @formatter:on
+    }
 
     @Test
     @UseDataProvider("dataProviderAdd")
@@ -63,6 +74,21 @@ public class DataProviderTest {
 
         // When:
         int result = a + b;
+
+        // Then:
+        //assertEquals(expected, result);
+
+        //Leveraging the UFT Pro (LeanFT) Verify object which will automatically create the runresults.html report
+        Verify.areEqual(expected, result);
+    }
+
+    @Test
+    @UseDataProvider("dataProviderSubtract")
+    public void testSubtract(int a, int b, int expected) {
+        // Given:
+
+        // When:
+        int result = a -  b;
 
         // Then:
         //assertEquals(expected, result);
