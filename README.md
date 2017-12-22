@@ -1,5 +1,5 @@
 # Background
-This is a very simple example of UFT Pro (LeanFT) being leveraged by a custom framework and also utilizing the @DataProvider tag.
+This is a very simple example of [Micro Focus UFT Pro (LeanFT)](https://software.microfocus.com/en-us/software/leanft) being leveraged by a custom framework and also utilizing the @DataProvider tag.
 
 # Setup
 The information on how to leverage UFT Pro (LeanFT) in a custom framework can be found:
